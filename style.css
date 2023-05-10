@@ -1,0 +1,208 @@
+body{
+  background-color: #e0dede;
+
+/*  background: linear-gradient(transparent, transparent),
+              linear-gradient(#000, #fff);
+  background-position: top;
+  background-size: 100% 50px, 100% calc(100% - 50px);*/
+}
+
+@font-face{
+  font-family: Modula ribbed;
+  src:  url(Modula Ribbed Regular.otf);
+}
+
+@font-face{
+  font-family:Supply Mono Ultralight;
+  src:  url(PPSupplyMono-Ultralight.otf);
+}
+
+@font-face{
+  font-family:Supply Mono Regular;
+  src:  url(PPSupplySans-Regular.otf);
+}
+
+#canvas{
+/*webcam. correspond with #video*/
+  position: absolute;
+  top: 17%;
+  left: 0%;
+  z-index:1;
+/*  cursor: url("imgs/cursor.png"), auto;*/
+}
+
+#video{
+/*facemesh. correspond with #video*/
+  position: absolute;
+  top: 17%;
+  left: 0%;
+  z-index:0;
+}
+
+#title{
+  font-family: Modula ribbed;
+  font-size: 180px;
+
+  color: #ee311a;
+  /*color:#76b316; green*/
+/*  -webkit-text-stroke-color: #c2f11e;
+  -webkit-text-stroke-width: 1px;*/
+
+  position: absolute;
+  display: flex;
+  margin-top: -2.5%;
+  margin-left: 2%;
+}
+
+
+h1{
+    font-family:Supply Mono Regular;
+    padding-left: 5vw;
+}
+
+
+/* The popup form how this works*/
+/*note to self//make the positioning the same*/
+.open-button{
+  font-family: Supply Mono Ultralight;
+  font-size: 15px;
+
+  cursor: help;
+
+  position: fixed;
+  bottom: 21vh;
+  left: 0.8vw;
+  width: 280px;
+/*  position: absolute;
+  display: flex;
+  height: auto;
+  width: auto;
+ 
+  flex-direction: row;
+  margin-top: 44%;
+  margin-left: 5%;
+
+*/  border: none;
+  background: transparent;
+}
+
+.open-buttonmad{
+  font-family: Supply Mono Ultralight;
+  font-size: 15px;
+
+  cursor: wait;
+
+/*  position: fixed;
+  bottom: 77.5vh;
+  right: 14.5vw;
+  width: 280px;*/
+  position: absolute;
+  display: flex;
+  height: auto;
+  width: auto;
+ 
+  flex-direction: row;
+  margin-top: 46%;
+  margin-left: 5%;
+
+  border: none;
+  background: transparent;
+}
+
+.form-popup {
+  font-family:Supply Mono Ultralight;
+  color: #3a3a3a;
+
+  display: none;
+  position: fixed;
+  top: 0%;
+  right:  0%;
+  z-index: 9;
+}
+
+.form-popupmad {
+  font-family:Supply Mono Ultralight;
+  color: #3a3a3a;
+
+  display: none;
+  position: fixed;
+  top: 0%;
+  right:  0%;
+  z-index: 9;
+}
+
+.form-containermad input[type=text] {
+  width: 15%;
+  font-family:Supply Mono Ultralight;
+  border: none;
+  background: #f2f1f1;
+  text-decoration: none;
+  
+}
+
+.form-containermad input[type=text]:focus {
+  font-family:Supply Mono Ultralight;
+
+  border: none;
+  background: #f1f1f1;
+  outline: none;
+  width: auto;
+}
+
+/* form rec*/
+.form-container {
+  font-family:Supply Mono Ultralight;
+  background-color: #c7cc29;
+
+  max-width: 385px;
+  min-height: 100vh;
+  padding: 4vh;
+}
+
+.form-containermad {
+  font-family:Supply Mono Ultralight;
+  background-color: #c7cc29;
+
+  max-width: 385px;
+  min-height: 100vh;
+  padding: 4vh;
+}
+
+/*marquee*/
+.container {
+  overflow: hidden;
+  font-family: Supply Mono Ultralight;
+  float: right;
+
+}
+
+.scrolling {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateY(-100%);
+  }
+  to { 
+    transform: translateY(100%);
+  }
+}
+
+/*slider stuff*/
+.valueDisplay{
+/*words for the sliders, correspond with .slider*/
+  color: #3a3a3a;
+  font-family:Supply Mono Ultralight;
+
+  position: relative;
+  margin-left: 25%;
+  top: 75vh; 
+}
+
+.Slider{
+  position:  relative;
+  margin-left: 25%;
+  top: 75vh;
+}
+

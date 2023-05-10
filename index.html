@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset = "utf-8">
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+  <script defer language="javascript" type="text/javascript" src="detection.js"></script>
+  <script defer language="javascript" type="text/javascript" src="script.js"></script>
+
+  <title>sorry bout my face</title>
+  <link rel="icon" type="image/x-icon" href="imgs/face.png">
+ 
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <video id="video"></video>
+
+    <div id="title">sorry about my face</div>
+
+<!-- marquee stuff -->
+<div class="container">
+  <div class="scrolling">
+    <img src = "imgs/mask.png" width="250px" height="265px">
+  </div><div class="scrolling" aria-hidden="true">
+    <img src = "imgs/mask4.png" width="200px" height="265px">
+  </div><div class="scrolling" aria-hidden="true">
+    <img src = "imgs/mask2.png" width="210px" height="265px">
+  </div><div class="scrolling" aria-hidden="true">
+    <img src = "imgs/mask3.png" width="230px" height="265px">
+  </div>
+
+<!--pop-up for the mad libs-->
+<button class="open-button" onclick="openForm1()">(HOW THIS WORKS)</button>
+
+<div class="form-popup" id="myForm1">
+  <form action="/action_page.php" class="form-container">
+  <button type="button" class="btn cancel" onclick="closeForm1()">X</button>
+
+    <h1>KEY</h1>
+
+_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._<br><br>
+
+<span style=" font-kerning: auto; font-family:Supply Mono Regular;">TO START--</span>
+<br>
+press key "control" + "e"--> toggle on/off editing mode
+<br><br>
+<span style=" font-kerning: auto; font-family:Supply Mono Regular;">TO EDIT--</span>
+<br>
+press key "control" + "z"--> undo stroke
+<br>
+press key "control" +"c"--> create shape
+<br>
+press key "control" + "d"--> delete everything
+<br><br>
+<span style=" font-kerning: auto; font-family:Supply Mono Regular;">TO SAVE--</span>
+<br>
+press key "control" + "s"--> take a screenshit<br><br>
+
+_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._<br><br>
+</div>
+  </form>
+</div>
+
+<!--pop-up for the mad libs-->
+<button class="open-buttonmad" onclick="openForm2()">(NEED A PROMPT?)</button>
+
+<div class="form-popupmad" id="myForm2">
+  <form action="/action_page.php" class="form-containermad">
+  <button type="button" class="btn cancel" onclick="closeForm2()">X</button>
+
+    <h1>your face is ruined</h1>
+
+_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._<br><br>
+
+Today has been a bad day.<br>A very bad day.<br>You ask why? Well I guess I'll tell you. <br><br>---------------<br><br>
+My hair got <input type="text" id="past action verb" value=" past action verb"> by <input type="text" id="person" value="person in the room">, and they didn't apologize! Next, as I was heading to <input type="text" id="place" value=" place">, a(n) <input type="text" id="animal" value=" animal"> poked my eyes so hard, I cried <input type="text" id="liquid" value=" liquid">. As I was in<input type="text" id="place" value="place">, my nose was pinched by a very<input type="text" id="adjective" value=" adjective">old lady, and she had the <input type="text" id="adjective" value="adjective">smile on her face.
+What a cute old lady. What a day it's been! I haven't even mentioned the <input type="text" id="animal" value="animal"> that stung my mouth, making it swell <input type="text" id="number" value="number"> times the size of<input type="text" id="planet" value="planet">. 
+
+<br>Man, I can't wait to get home and sleep.<br>
+
+
+<br><br>---------------<br><br>
+<span style=" font-kerning: auto;  font-family:Supply Mono Regular;">That is why all I can say to you is, sorry for my face.</span>
+<br><br>---------------<br><br>
+
+Using the webcam tool, draw your bad day mask.
+  </form>
+</div>
+
+
+</body>
+</html>
+
+
+
